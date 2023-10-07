@@ -32,9 +32,9 @@ export default function Index() {
       <h1>REEL REVIEWS</h1>
       <h3>Choose a user below:</h3>
       <UserList users={users} />
-      <div>
-        <button>Add User</button>
-        <button>Delete User</button>
+      <div className="user-buttons">
+        <button style={{borderRadius: "5px 5px 5px 15px"}}>ADD</button>
+        <button style={{borderRadius: "5px 5px 15px 5px"}}>DELETE</button>
       </div>
     </div>
   );

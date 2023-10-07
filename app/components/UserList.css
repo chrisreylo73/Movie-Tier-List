@@ -12,8 +12,10 @@
   animation: fade-blur-in 1s ease-out forwards;
 }
 .user-list button{
-  background: rgb(195, 229, 254);
-  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
   border: 3px rgb(224, 242, 255);
   color:  rgb(15, 15, 15); 
   margin-left: 70px;

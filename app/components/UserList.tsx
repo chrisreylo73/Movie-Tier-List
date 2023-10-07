@@ -22,7 +22,7 @@ const UserList = ({users}: { users: User[] }) => {
           {/* Link to view user details */}
           <div>
             <Link to={`/movies/${user.user_id}`}>
-              <button> Movie List </button>
+              <button>M</button>
             </Link>
           </div>
 
