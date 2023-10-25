@@ -71,13 +71,16 @@
  }
 
  .movie{
+  background-image: url('/clapperboard (2).png');
   position: relative; /* Set the position to relative */
   display: flex;
   margin-left: 10px;
   width: 130px;
   height:115px;
-  background-color: rgb(60, 60, 127);
-  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  background-size: 150px 150px; 
+  background-position: center;
+  border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   color: white;
   justify-content: center;
@@ -93,7 +96,9 @@
   /* letter-spacing: .5rem; */
 
  }
+
  .del{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   background-color: white;
   border-radius: 20px;
@@ -103,10 +108,6 @@
   width:20px;
   height:20px;
  }
-
-/* .movieTitle p{
-} */
-
 
 button{
    height: 20px;
