@@ -28,7 +28,12 @@ const UserList = ({ users }: { users: User[] }, { delDisplay }: {delDisplay: str
           {/* Link to view user details */}
           <div className='mButton'>
             <Link to={`/movies/${user.user_id}`}>
-              <button>M</button>
+              <button>
+                <img
+                src="/film-reel.png" // Path to your image in the "public" folder
+                alt="M" // Alt text for accessibility
+                />
+              </button>
             </Link>
           </div>
         </div>
