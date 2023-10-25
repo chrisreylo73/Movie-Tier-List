@@ -11,30 +11,34 @@ const MovieTierList = () => {
     <div>
        <div className="tiers">
             <div className="S">
-               <p>S</p>
+              <p className="tierLabel">S</p>
+              <div className="movie">
+                 <div className="del"></div>
+                 <p className="movieTitle">The Dark Knight</p>
+              </div>
             </div>
             <div className="A" style={{backgroundColor: ""}}>
-               <p>A</p>
+            <p className="tierLabel">A</p>
             </div>
             <div className="B">
-               <p>B</p>
+            <p className="tierLabel">B</p>
             </div>
             <div className="C">
-               <p>C</p>
+            <p className="tierLabel">C</p>
             </div>
             <div className="D">
-               <p>D</p>
+               <p className="tierLabel">D</p>
             </div>
         </div>
         {/* <Link to={`/`}>
           <button style={{ borderRadius: "5px 5px 15px 15px" }}>HOME</button>
         </Link> */}
         <Link to={`/`}>
-          <button style={{ borderRadius: "5px 5px 5px 15px" }}>ADD MOVIE</button>
+          <button style={{ borderRadius: "5px 5px 15px 15px" }}>ADD MOVIE</button>
         </Link>
-        <Link to={`/`}>
+        {/* <Link to={`/`}>
           <button style={{ borderRadius: "5px 5px 15px 5px" }}>DELETE MOVIE</button>
-        </Link>
+        </Link> */}
     </div>
   )
 }
