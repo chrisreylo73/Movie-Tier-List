@@ -6,11 +6,17 @@ export function links() {
 	return [{ rel: "stylesheet", href: styles }];
 }
 
-const UserList = ({users}: { users: User[] }) => {
+const UserList = ({ users }: { users: User[] }, { delDisplay }: {delDisplay: string}) => {
   return (
     <div>
       {users.map((user) => (
         <div className="user-list" key={user.user_id}>
+          <div  className="delete" >
+            <Form method="delete" >
+           		<input title="BM" type={"hidden"} value={user.user_id} name="id" />
+           		<button type="submit">X</button>
+             </Form>
+          </div>  
           <div className="user">
             <p style={{color: "#434e62"}}>Name:</p>
             <p style={{color: "hsl(37, 100%, 81%)"}}>{user.name?.toUpperCase()}</p>
@@ -20,17 +26,11 @@ const UserList = ({users}: { users: User[] }) => {
             <p style={{color: "hsl(37, 100%, 81%)"}}>{user.email}</p>
           </div>
           {/* Link to view user details */}
-          <div>
+          <div className='mButton'>
             <Link to={`/movies/${user.user_id}`}>
               <button>M</button>
             </Link>
           </div>
-
-          {/* Form for user deletion */}
-          {/* <Form method="delete">
-            <input title="UserId" type="hidden" value={user.id} name="id" />
-            <button type="submit">DELETE</button>
-          </Form> */}
         </div>
       ))}
     </div>

@@ -11,15 +11,28 @@
   padding-right: 10px;
   animation: fade-blur-in 1s ease-out forwards;
 }
-.user-list button{
+.delete button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color:white;
+  background-color: #858585;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+
+.mButton button{
   width: 40px;
   height: 40px;
   background: rgb(255, 255, 255);
   border-radius: 10px;
-  border: 3px rgb(224, 242, 255);
   color:  rgb(15, 15, 15); 
-  margin-left: 70px;
+  margin-left: 80px;
 }
+
 .user{
   display: flex;
   width: 100px;
