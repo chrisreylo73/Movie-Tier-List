@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { redirect } from "@remix-run/node";
-import { useTransition } from "react";
+import { useNavigation} from "@remix-run/react";
 import UserForm, {links as userFormLinks} from "~/components/UserForm";
 
 export function links() {
@@ -33,8 +33,8 @@ export async function action({ request }: { request: Request }) {
 }
  
 const add_user = () => {
-  const {state} = useTransition();
-  const isSubmitting = state === "submitting";
+  const nav = useNavigation();
+  const isSubmitting = nav.state === "submitting";
   return (
     <div>
       <UserForm isSubmitting={isSubmitting} />
