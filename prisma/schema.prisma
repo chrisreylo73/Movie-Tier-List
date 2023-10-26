@@ -14,26 +14,18 @@ model User {
   user_id Int     @id @default(autoincrement())
   email   String  @unique
   name    String?
-  ranks   Rank[]
+  movies   Movie[]
 }
 
 model Movie {
-  movie_id    Int       @id @default(autoincrement())
-  title       String
-  description String?
-  releaseDate DateTime?
-  ranks       Rank[]
-}
-
-model Rank {
-  rank_id   Int      @id @default(autoincrement())
-  rating    Int
-  comment   String?
-  userId    Int
-  movieId   Int
-  createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [user_id])
-  movie     Movie    @relation(fields: [movieId], references: [movie_id])
-
-  @@unique([userId, movieId])
+  movie_id       Int       @id @default(autoincrement())
+  title          String
+  story          Int
+  characters     Int
+  acting         Int
+  action         Int
+  cinematography Int
+  overall        Int
+  userId         Int
+  user           User @relation(fields: [userId], references: [user_id])
 }
