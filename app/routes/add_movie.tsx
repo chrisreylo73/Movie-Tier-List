@@ -1,9 +1,18 @@
+import { useNavigation } from "@remix-run/react";
+import MovieForm, { links as movieFormLinks } from "~/components/MovieForm";
+
+
+export function links() {
+  return [...movieFormLinks()];
+}
 
 
 const add_movie = () => {
+  const nav = useNavigation();
+  const isSubmitting = nav.state === "submitting";
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Add A NEW MOVIE</h1>
+      <MovieForm isSubmitting={isSubmitting}/>
     </div>
   )
 }
