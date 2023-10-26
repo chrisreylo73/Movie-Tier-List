@@ -14,8 +14,8 @@
    display: flex;
    align-items: center;
    background-color: #a8e6cf; 
-   height: 75px;
-   width: 1000px;
+   height: 100px;
+   width: 1400px;
    border-radius: 20px;
  }
  
@@ -24,8 +24,8 @@
   display: flex;
    align-items: center;
    background-color: #dcedc1; 
-   height: 75px;
-   width: 1000px;
+   height: 100px;
+   width: 1400px;
    border-radius: 20px;
  }
 
@@ -34,8 +34,8 @@
   display: flex;
    align-items: center;
    background-color: #ffd3b6; 
-   height: 75px;
-   width: 1000px;
+   height: 100px;
+   width: 1400px;
    border-radius: 20px;
  }
 
@@ -44,8 +44,8 @@
   display: flex;
    align-items: center;
    background-color: #ffaaa5; 
-   height: 75px;
-   width: 1000px;
+   height: 100px;
+   width: 1400px;
    border-radius: 20px;
  }
  
@@ -55,8 +55,8 @@
    display: flex;
    align-items: center;
    background-color: #ff8b94; 
-   height: 75px;
-   width: 1000px;
+   height: 100px;
+   width: 1400px;
    border-radius: 20px;
  }
 
@@ -76,7 +76,7 @@
   display: flex;
   margin-left: 10px;
   width: 130px;
-  height:115px;
+  height: 95px;
   background-color: rgb(0, 0, 0);
   background-size: 150px 150px; 
   background-position: center;
