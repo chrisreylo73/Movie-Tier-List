@@ -1,5 +1,5 @@
 import { Form } from "@remix-run/react"
-import styles from "./UserForm.css";
+import styles from "app/styles//UserForm.css";
 
 export function links() {
 	return [{ rel: "stylesheet", href: styles }];

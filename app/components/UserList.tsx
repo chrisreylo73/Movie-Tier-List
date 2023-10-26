@@ -1,6 +1,6 @@
 import { Form, Link } from '@remix-run/react'
 import { User } from "@prisma/client";
-import styles from "./UserList.css";
+import styles from "app/styles/UserList.css";
 
 export function links() {
 	return [{ rel: "stylesheet", href: styles }];

@@ -1,0 +1,30 @@
+label{
+   color: white;
+}
+
+.movieForm{
+ /* background-color:aqua; */
+ width: 280px;
+}
+
+.inputs{
+   display:flex;
+   justify-content:space-between;
+   margin-top: 5px;
+}
+.inputs input{
+   border-radius: 8px;
+   border: none;
+   background-color: #242a35;
+   color: hsl(37, 100%, 81%);
+}
+button {
+   border-radius: 5px 5px 15px 15px;
+   height: 20px;
+   font-size: 13px;
+   font-weight: bold;
+   width: 150px;
+   border: none;
+   margin: 1px;
+   background-color: rgb(254, 254, 254);
+}

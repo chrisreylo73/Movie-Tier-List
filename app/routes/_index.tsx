@@ -29,17 +29,6 @@ export async function action({ request }: { request: Request }) {
   const prisma = new PrismaClient();
 
   try {
-    // Handle POST requests (creating a new user)
-    // if (request.method === "POST") {
-    //   // Create a new user
-    //   const newUser = await prisma.user.create({
-    //     data: {
-    //       email: formData.get('email'),
-    //       name: formData.get('name'),
-    //     },
-    //   });
-    //   console.log("New User:", newUser);
-    // }
     // Handle DELETE requests (deleting a user)
     if (request.method === "DELETE") {
       // Extract user ID from the form data

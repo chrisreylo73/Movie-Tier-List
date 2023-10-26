@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./MovieTierList.css";
+import styles from "app/styles/MovieTierList.css";
 import { Link, useLocation } from '@remix-run/react';
 
 export function links() {
