@@ -1,0 +1,13 @@
+label{
+   color: white;
+}
+
+.movieForm{
+ background-color:aqua;
+ width: 280px;
+}
+
+.inputs{
+   display:flex;
+   justify-content:space-between;
+}

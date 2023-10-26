@@ -7,22 +7,45 @@ export function links() {
 
 const MovieForm  = ({ isSubmitting }: { isSubmitting: boolean }) =>  {
   return (
-     <div className="userForm" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>ADD A NEW MOVIE</h1>
+     <div className="movieForm" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+      <h1>ADD MOVIE</h1>
       <Form method="post">
-        <div>
+      <div className="inputs">
+        <label>
+                 Title:
+                 </label>
           <input name="title" placeholder="Title" size={30} />
-        </div>
-        {/* <div className="dropdown">
-           <button className="dropbtn">Dropdown</button>
-           <div className="dropdown-content">
-             <a href="#">Option 1</a>
-             <a href="#">Option 2</a>
-             <a href="#">Option 3</a>
-           </div>
-         </div> */}
+        
+      </div>
+      <div className="inputs" >
+        <label>Story:</label>
+          <input name="story" type="number" min="1" max="5" step="1" />
+        
+      </div>
+      <div className="inputs">
+        <label>Characters:</label>
+          <input name="characters" type="number" min="1" max="5" step="1" />
+      </div>
+      <div className="inputs">
+        <label>Acting:</label>
+          <input name="acting" type="number" min="1" max="5" step="1" />
+      </div>
+      <div className="inputs">
+        <label>Action:</label>
+          <input name="action" type="number" min="1" max="5" step="1" />
+
+      </div>
+      <div className="inputs">
+        <label>Cinematography:</label>
+          <input name="cinematography" type="number" min="1" max="5" step="1" />
+      </div>
+      <div className="inputs">
+        <label>Overall:</label>
+          <input name="overall" type="number" min="1" max="5" step="1" />
+      </div>
+
         <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Creating..." : "Create New User"}
+          {isSubmitting ? "Creating..." : "Add Movie"}
            </button>
        </Form>
     </div>
