@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./MovieTierList.css";
-import { Link } from '@remix-run/react';
+import { Link, useLocation } from '@remix-run/react';
 
 export function links() {
 	return [{ rel: "stylesheet", href: styles }];
@@ -30,15 +30,9 @@ const MovieTierList = () => {
                <p className="tierLabel">D</p>
             </div>
         </div>
-        {/* <Link to={`/`}>
-          <button style={{ borderRadius: "5px 5px 15px 15px" }}>HOME</button>
-        </Link> */}
-        <Link to={`/`}>
+        <Link to={`/add_movie`}>
           <button style={{ borderRadius: "5px 5px 15px 15px" }}>ADD MOVIE</button>
         </Link>
-        {/* <Link to={`/`}>
-          <button style={{ borderRadius: "5px 5px 15px 5px" }}>DELETE MOVIE</button>
-        </Link> */}
     </div>
   )
 }

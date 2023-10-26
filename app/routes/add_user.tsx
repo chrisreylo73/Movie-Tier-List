@@ -36,7 +36,7 @@ const add_user = () => {
   const nav = useNavigation();
   const isSubmitting = nav.state === "submitting";
   return (
-    <div>
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <UserForm isSubmitting={isSubmitting} />
     </div>
   )

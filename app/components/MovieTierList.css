@@ -13,7 +13,7 @@
  .S {
    display: flex;
    align-items: center;
-   background-color: #a8e6cf; /* Change the color as needed */
+   background-color: #a8e6cf; 
    height: 135px;
    width: 1400px;
    border-radius: 20px;
@@ -23,7 +23,7 @@
   margin-top: 15px;
   display: flex;
    align-items: center;
-   background-color: #dcedc1; /* Change the color as needed */
+   background-color: #dcedc1; 
    height: 135px;
    width: 1400px;
    border-radius: 20px;
@@ -33,7 +33,7 @@
   margin-top: 15px;
   display: flex;
    align-items: center;
-   background-color: #ffd3b6; /* Change the color as needed */
+   background-color: #ffd3b6; 
    height: 135px;
    width: 1400px;
    border-radius: 20px;
@@ -43,7 +43,7 @@
   margin-top: 15px;
   display: flex;
    align-items: center;
-   background-color: #ffaaa5; /* Change the color as needed */
+   background-color: #ffaaa5; 
    height: 135px;
    width: 1400px;
    border-radius: 20px;
@@ -54,7 +54,7 @@
    margin-top: 15px;
    display: flex;
    align-items: center;
-   background-color: #ff8b94; /* Change the color as needed */
+   background-color: #ff8b94; 
    height: 135px;
    width: 1400px;
    border-radius: 20px;
@@ -72,7 +72,7 @@
 
  .movie{
   background-image: url('/clapperboard (2).png');
-  position: relative; /* Set the position to relative */
+  position: relative; 
   display: flex;
   margin-left: 10px;
   width: 130px;
@@ -85,16 +85,13 @@
   color: white;
   justify-content: center;
   align-items: center;
-  color: hsl(49, 86%, 65%);
+  color: hsl(0, 0%, 100%);
   text-shadow: #171b30 2px 5px;
   font-weight: bolder;
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
-  /* letter-spacing: .5rem; */
-
  }
 
  .del{
@@ -102,9 +99,9 @@
   display: flex;
   background-color: white;
   border-radius: 20px;
-  position: absolute; /* Set the position to absolute */
-  top: 5px; /* Adjust top position as needed */
-  left: 5px; /* Adjust left position as needed */
+  position: absolute; 
+  top: 5px; 
+  left: 5px; 
   width:20px;
   height:20px;
  }

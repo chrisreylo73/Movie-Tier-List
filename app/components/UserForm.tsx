@@ -7,7 +7,7 @@ export function links() {
 
 const UserForm = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (
-    <div className="userForm">
+    <div className="userForm" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h2>Enter user information below: </h2>
       <Form method="post">
         <div>
