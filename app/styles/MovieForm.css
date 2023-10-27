@@ -1,10 +1,16 @@
 label{
    color: white;
+   font-size: 18px;
 }
 
 .movieForm{
  /* background-color:aqua; */
- width: 280px;
+ width: 340px;
+}
+
+#title{
+   width: 280px;
+   height: 35px;
 }
 
 .inputs{
@@ -12,7 +18,12 @@ label{
    justify-content:space-between;
    margin-top: 5px;
 }
+
 .inputs input{
+   text-align: center;
+   font-size: 18px;
+   width: 80px;
+   height: 35px;
    border-radius: 8px;
    border: none;
    background-color: #242a35;
