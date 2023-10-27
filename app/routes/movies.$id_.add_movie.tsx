@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { redirect } from "@remix-run/node";
+import { LoaderFunction, redirect } from "@remix-run/node";
 import { useNavigation } from "@remix-run/react";
 import MovieForm, { links as movieFormLinks } from "~/components/MovieForm";
 
@@ -8,7 +8,12 @@ export function links() {
   return [...movieFormLinks()];
 }
 
-export async function action({ request }: { request: Request }) {
+export let loader: LoaderFunction = ({ params }) => {
+  const userId = params.userId; // Retrieve the userId from the route parameters
+  return { userId};
+};
+
+export async function action({request, data}: {request: Request; data: { userId: string };}) {
   // Extract form data from the request
   const formData = await request.formData();
   // Create a new instance of PrismaClient
@@ -26,7 +31,7 @@ export async function action({ request }: { request: Request }) {
          acting: parseInt(formData.get('acting') as string),
          cinematography: parseInt(formData.get('cinematography') as string),
          overall: parseInt(formData.get('overall') as string),
-         userId: 2
+          userId: parseInt(data.userId)
         },
       });
       console.log("New User:", newMovie);
@@ -36,7 +41,7 @@ export async function action({ request }: { request: Request }) {
     await prisma.$disconnect();
   }
   // Redirect to the main page after the action is performed
-  return redirect('./');
+  return redirect('');
 }
 
 const add_movie = () => {
