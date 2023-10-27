@@ -9,11 +9,7 @@ export function links() {
   return [...movieFormLinks()];
 }
 
-export async function loader({params}: LoaderFunctionArgs) { 
-  return params.id;
-}
-
-export async function action({ request, params }: { request: Request; }) {
+export async function action({ request, params }: { request: Request;  params: any}) {
   // Extract form data from the request
   const formData = await request.formData();
   const prisma = new PrismaClient();
@@ -41,7 +37,7 @@ export async function action({ request, params }: { request: Request; }) {
     await prisma.$disconnect();
   }
   // Redirect to the main page after the action is performed
-  return redirect('./');
+  return redirect(`/movies/${params.id}`);
 }
 
 const add_movie = () => {
