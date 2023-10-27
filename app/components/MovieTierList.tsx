@@ -8,17 +8,9 @@ export function links() {
 }
 
 
-export let loader: LoaderFunction = ({ params }) => {
-  const userId = params.id // Retrieve the userId from the route parameters
-  console.log('userId:', userId);
-  return {userId};
-};
 
 
 const MovieTierList = () => {
-  // const { params } = useParams();
-  // console.log(params);
-  // const { data } = useLoaderData();
   return (
     <div>
        <div className="tiers">

@@ -54,9 +54,6 @@ export function links() {
 
 export default function Index() {
   const users = useLoaderData();
-  // Get transition state for form submission
-  // const { state } = useTransition();
-  // const isSubmitting = state === "submitting";
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>REEL REVIEWS</h1>
@@ -66,9 +63,7 @@ export default function Index() {
         <Link to={`/add_user`}>
           <button style={{borderRadius: "5px 5px 15px 15px"}}>ADD</button>
         </Link>
-          {/* <button style={{ borderRadius: "5px 5px 15px 5px" }}>DELETE</button> */}
       </div>
-      {/* <UserForm isSubmitting={isSubmitting} /> */}
     </div>
   );
 }

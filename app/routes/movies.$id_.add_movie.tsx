@@ -1,23 +1,23 @@
 import { PrismaClient } from "@prisma/client";
-import { LoaderFunction, redirect } from "@remix-run/node";
-import { useNavigation } from "@remix-run/react";
+import { LoaderFunction, LoaderFunctionArgs, redirect } from "@remix-run/node";
+import { useLoaderData, useNavigation} from "@remix-run/react";
 import MovieForm, { links as movieFormLinks } from "~/components/MovieForm";
-
+import { useRouteLoaderData } from "@remix-run/react";
+import { useParams } from 'react-router-dom';
 
 export function links() {
   return [...movieFormLinks()];
 }
 
-export let loader: LoaderFunction = ({ params }) => {
-  const userId = params.userId; // Retrieve the userId from the route parameters
-  return { userId};
-};
+export async function loader({params}: LoaderFunctionArgs) { 
+  return params.id;
+}
 
-export async function action({request, data}: {request: Request; data: { userId: string };}) {
+export async function action({ request, params }: { request: Request; }) {
   // Extract form data from the request
   const formData = await request.formData();
-  // Create a new instance of PrismaClient
   const prisma = new PrismaClient();
+  
   try {
     // Handle POST requests (creating a new user)
     if (request.method === "POST") {
@@ -31,7 +31,7 @@ export async function action({request, data}: {request: Request; data: { userId:
          acting: parseInt(formData.get('acting') as string),
          cinematography: parseInt(formData.get('cinematography') as string),
          overall: parseInt(formData.get('overall') as string),
-          userId: parseInt(data.userId)
+         userId: parseInt(params.id as string),
         },
       });
       console.log("New User:", newMovie);
@@ -41,10 +41,11 @@ export async function action({request, data}: {request: Request; data: { userId:
     await prisma.$disconnect();
   }
   // Redirect to the main page after the action is performed
-  return redirect('');
+  return redirect('./');
 }
 
 const add_movie = () => {
+  
   const nav = useNavigation();
   const isSubmitting = nav.state === "submitting";
   return (
