@@ -1,6 +1,6 @@
 
 import styles from "app/styles/MovieTierList.css";
-import { Link, useLoaderData, useLocation, useParams } from '@remix-run/react';
+import { Form, Link, useLoaderData, useLocation, useParams } from '@remix-run/react';
 import { Movie } from "@prisma/client";
 
 export function links() {
@@ -14,46 +14,61 @@ const MovieTierList = ({ categorizedMovies }: { categorizedMovies: Record<string
             <div className="S">
               <p className="tierLabel">S</p>
               {categorizedMovies['S'].map((movie) => (
-              <div className="movie">
-                 <div className="del"></div>
-                 <p className="movieTitle">{movie.title}</p>
+                <div className="movie">
+                  <Form method="delete" >
+                 		<input title="BM" type={"hidden"} value={movie.movie_id} name="id" />
+                 		<button className="del"   type="submit">X</button>
+                  </Form>
+                  <p className="movieTitle">{movie.title}</p>
                 </div>
-               ))}
+              ))}
             </div>
             <div className="A">
-          <p className="tierLabel">A</p>
-          {categorizedMovies['A'].map((movie) => (
-              <div className="movie">
-                 <div className="del"></div>
-                 <p className="movieTitle">{movie.title}</p>
+              <p className="tierLabel">A</p>
+              {categorizedMovies['A'].map((movie) => (
+                <div className="movie">
+                  <Form method="delete" >
+                    <input title="BM" type={"hidden"} value={movie.movie_id} name="id" />
+                    <button className="del"   type="submit">X</button>
+                  </Form>
+                  <p className="movieTitle">{movie.title}</p>
                 </div>
                ))}
             </div>
             <div className="B">
-          <p className="tierLabel">B</p>
-          {categorizedMovies['B'].map((movie) => (
-              <div className="movie">
-                 <div className="del"></div>
-                 <p className="movieTitle">{movie.title}</p>
+              <p className="tierLabel">B</p>
+              {categorizedMovies['B'].map((movie) => (
+                <div className="movie">
+                  <Form method="delete" >
+                      <input title="BM" type={"hidden"} value={movie.movie_id} name="id" />
+                      <button className="del"   type="submit">X</button>
+                  </Form>
+                  <p className="movieTitle">{movie.title}</p>
                 </div>
-               ))}
+              ))}
             </div>
             <div className="C">
-          <p className="tierLabel">C</p>
-          {categorizedMovies['C'].map((movie) => (
-              <div className="movie">
-                 <div className="del"></div>
-                 <p className="movieTitle">{movie.title}</p>
+              <p className="tierLabel">C</p>
+              {categorizedMovies['C'].map((movie) => (
+                <div className="movie">
+                  <Form method="delete" >
+                    <input title="BM" type={"hidden"} value={movie.movie_id} name="id" />
+                    <button className="del"   type="submit">X</button>
+                  </Form>
+                  <p className="movieTitle">{movie.title}</p>
                 </div>
                ))}
             </div>
             <div className="D">
-          <p className="tierLabel">D</p>
-          {categorizedMovies['D'].map((movie) => (
-              <div className="movie">
-                 <div className="del"></div>
-                 <p className="movieTitle">{movie.title}</p>
-                </div>
+              <p className="tierLabel">D</p>
+              {categorizedMovies['D'].map((movie) => (
+                  <div className="movie">
+                  <Form method="delete" >
+                      <input title="BM" type={"hidden"} value={movie.movie_id} name="id" />
+                      <button className="del"   type="submit">X</button>
+                  </Form>
+                  <p className="movieTitle">{movie.title}</p>
+                 </div>
                ))}
             </div>
         </div>

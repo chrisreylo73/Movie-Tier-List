@@ -1,9 +1,11 @@
 import { PrismaClient } from "@prisma/client";
+import { redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import MovieTierList, {links as MovieTierLinks} from "~/components/MovieTierList";
+import NavBar, {links as NavBarLinks} from "~/components/NavBar";
 
 export function links() {
-  return [...MovieTierLinks()];
+  return [...MovieTierLinks(), ...NavBarLinks()];
 }
 
 export async function loader() {
@@ -28,11 +30,38 @@ export async function loader() {
    }
 }
  
+export async function action({ request }: { request: Request }) {
+   // Extract form data from the request
+   const formData = await request.formData();
+   // Create a new instance of PrismaClient
+   const prisma = new PrismaClient();
+ 
+   try {
+     // Handle DELETE requests (deleting a user)
+     if (request.method === "DELETE") {
+       // Extract user ID from the form data
+       const movieId = parseInt(formData.get('id') as string);
+       // Delete the user
+       const delResponse = await prisma.movie.delete({
+         where: { movie_id: movieId },
+       });
+       console.log("Deleted Movie:", delResponse);
+     }
+   } finally {
+     // Disconnect from the database, even if there is an error
+     await prisma.$disconnect();
+   }
+ 
+   // Redirect to the main page after the action is performed
+   return redirect('./');
+ }
+
 export default function MoviesById() { 
    const categorizedMovies = useLoaderData()
    return (
       <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
          <h1>MOVIES</h1>
+         <NavBar userId={"2"} ></NavBar>
          <MovieTierList categorizedMovies={categorizedMovies}/>
       </div>
    );

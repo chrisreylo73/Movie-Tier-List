@@ -1,0 +1,24 @@
+#Nav-Bar {
+   padding: 2rem 15%;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ #Nav-Bar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   gap: 1.5rem;
+   justify-content: center;
+ }
+ 
+ .nav-item a {
+   text-decoration: none;
+   color: white;
+ }
+ 
+ .nav-item a:hover,
+ .nav-item a.active {
+   color: rgb(221, 187, 102)
+ }
