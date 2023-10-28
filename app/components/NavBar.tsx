@@ -22,7 +22,7 @@ const NavBar = ({userId}: {userId: string}) => {
       <NavLink to={`/movies/${userId}/acting`}>ACTING</NavLink>
       </li>
      <li className="nav-item">
-      <NavLink to={`movies/${userId}/action`} >ACTION</NavLink>
+      <NavLink to={`/movies/${userId}/action`} >ACTION</NavLink>
      </li>
      <li className="nav-item">
       <NavLink to={`/movies/${userId}/cinematography`} >CINEMATOGRAPHY</NavLink>
