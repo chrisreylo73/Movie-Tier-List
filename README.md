@@ -1,38 +1,30 @@
-# Welcome to Remix!
+<summary>Reel Reviews</summary>
+<pre>
+    
+#   `DESCRIPTION`
+`
+The Reel Reviews Application is a full-stack web-based platform designed to
+empower users to create and maintain personalized movie lists, while also providing
+the capability to rank and share their favorite movies with others.
+Built using cutting-edge technologies, including SQLite, Prisma, React, and Remix,
+this application offers a seamless and engaging user experience for movie enthusiasts.
+`
+    
+#   `DEMO`
+![REEL_REVIEWS_DEMO](https://github.com/chrisreylo73/chrisreylo73/assets/72224622/7f583043-78ac-4582-af52-bfe512c3af4e)
 
-- [Remix Docs](https://remix.run/docs)
 
-## Development
+    
+#   `TECH STACK`
 
-From your terminal:
+- TypeScript
+- React
+- Remix
+- Prisma
+- SQLite
 
-```sh
-npm run dev
-```
+#   `LINKS`
+- [Link to Repository](https://github.com/chrisreylo73/Movie-Tier-List)
 
-This starts your app in development mode, rebuilding assets on file changes.
 
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+</pre>
